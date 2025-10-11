@@ -6,6 +6,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            /* Custom tweaks for featured section */
+            .featured-flex {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                flex-wrap: wrap;
+            }
+            .featured-flex img {
+                max-width: 280px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            }
+            .featured-text {
+                flex: 1;
+                min-width: 250px;
+            }
+        </style>
     </head>
     <body class="is-preload">
 
@@ -49,14 +67,24 @@
                 <article class="post featured">
                     <header class="major">
                         <span class="date">Updated 2025</span>
-                        <h2><a href="#">Cybersecurity Engineer & Builder</a></h2>
-                        <p>Hands-on engineer specializing in container security, compliance automation, and data visualization. 
-                        Passionate about reproducible labs, automation, and making technical work accessible to others.</p>
                     </header>
-                    <a href="images/danielbzuraheadshot.JPG" class="image main"><img src="images/danielbzuraheadshot.JPG" alt="Daniel Bzura" /></a>
-                    <ul class="actions special">
-                        <li><a href="projects.html" class="button large">View My Projects</a></li>
-                    </ul>
+                    <div class="featured-flex">
+                        <!-- Profile Photo -->
+                        <div>
+                            <img src="images/danielbzuraheadshot.JPG" alt="Daniel Bzura" />
+                        </div>
+                        <!-- Text Content -->
+                        <div class="featured-text">
+                            <h2>Cybersecurity Engineer & Builder</h2>
+                            <p>
+                                Hands-on engineer specializing in container security, compliance automation, and data visualization. 
+                                Passionate about reproducible labs, automation, and making technical work accessible to others.
+                            </p>
+                            <ul class="actions special">
+                                <li><a href="projects.html" class="button large">View My Projects</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </article>
 
                 <!-- Posts -->
