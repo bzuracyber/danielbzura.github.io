@@ -3310,7 +3310,7 @@ input, select, textarea {
 		cursor: default;
 		text-align: center;
 		z-index: 1;
-		min-height: 100vh;
+		min-height: 95vh;
 	}
 
 		#intro input, #intro select, #intro textarea {
@@ -3944,6 +3944,14 @@ input, select, textarea {
 			}
 
 		}
+		.post-logo {
+    width: 140px;       /* fixed width */
+    height: 140px;      /* fixed height */
+    object-fit: contain; /* keeps aspect ratio inside the box */
+    display: block;
+    margin: 0 auto 1rem auto; /* centers the logo above the title */
+}
+
 
 /* Footer */
 
