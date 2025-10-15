@@ -1,27 +1,50 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Daniel Bzura | Cybersecurity Engineer & Community Builder</title>
+        <title>Daniel Bzura | Cybersecurity Engineer</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <link rel="icon" type="image/png" href="images/plus.png">
         <style>
             /* Custom tweaks for featured section */
             .featured-flex {
                 display: flex;
-                align-items: center;
-                gap: 2rem;
+                align-items: center; /* vertically center image and text */
+                justify-content: space-between;
+                gap: 3rem;
                 flex-wrap: wrap;
             }
             .featured-flex img {
-                max-width: 280px;
+                max-width: 450px;
+                width: 150%;
+                height: auto;
                 border-radius: 8px;
                 box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             }
             .featured-text {
                 flex: 1;
-                min-width: 250px;
+                min-width: 300px;
+                text-align: center;
+            }
+            .featured-text h2 {
+                margin: 0 0 0.5rem 0;
+            }
+            .featured-text p {
+                margin: 0 0 1.5rem 2rem; /* indent the subtitle to the right */
+            }
+            @media (max-width: 768px) {
+                .featured-flex {
+                    flex-direction: column;
+                    text-align: center;
+                }
+                .featured-text {
+                    text-align: center;
+                }
+                .featured-text p {
+                    margin-left: 0; /* reset indent on mobile */
+                }
             }
         </style>
     </head>
@@ -32,9 +55,13 @@
 
             <!-- Intro -->
             <div id="intro">
+                <video autoplay muted loop playsinline id="bg-video">
+                    <source src="images/backgroundvideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
                 <h1>Daniel Bzura</h1>
-                <p>Cybersecurity Engineer at MAG AERO (Tobyhanna Army Depot) | CTO at PolishYouth.org | Founder of Orly FC<br/>
-                Focused on container security, compliance automation, and building community through technology and sport.</p>
+                <p>Cybersecurity Engineer @ MAG AERO | CTO @ Polish Youth Association | President of Orly FC</p>
                 <ul class="actions">
                     <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Explore</a></li>
                 </ul>
@@ -42,21 +69,22 @@
 
             <!-- Header -->
             <header id="header">
-                <a href="index.html" class="logo">Daniel Bzura</a>
+                
             </header>
 
             <!-- Nav -->
             <nav id="nav">
                 <ul class="links">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="active"><a href="/">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li><a href="polishyouth.html">PolishYouth.org</a></li>
-                    <li><a href="orlyfc.html">Orly FC</a></li>
+                    <li><a href="polishyouth.html">Polish Youth Association</a></li>
+                    <li><a href="orlyfc.html">ORŁY F.C.</a></li>
                 </ul>
                 <ul class="icons">
                     <li><a href="https://github.com/bzuracyber" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
                     <li><a href="https://www.linkedin.com/in/daniel-bzura-0b3a9b1b5/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
                     <li><a href="https://www.instagram.com/bzuracyber/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="mailto:dannybzura@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
                 </ul>
             </nav>
 
@@ -65,21 +93,15 @@
 
                 <!-- Featured Post -->
                 <article class="post featured">
-                    <header class="major">
-                        <span class="date">Updated 2025</span>
-                    </header>
                     <div class="featured-flex">
                         <!-- Profile Photo -->
                         <div>
-                            <img src="images/danielbzuraheadshot.JPG" alt="Daniel Bzura" />
+                            <img src="images/danielbzuraheadshot.JPG" alt="Daniel Bzura" class="post-featured"/>
                         </div>
                         <!-- Text Content -->
                         <div class="featured-text">
-                            <h2>Cybersecurity Engineer & Builder</h2>
-                            <p>
-                                Hands-on engineer specializing in container security, compliance automation, and data visualization. 
-                                Passionate about reproducible labs, automation, and making technical work accessible to others.
-                            </p>
+                            <h2>Cybersecurity Engineer</h2>
+                            <br><br/>
                             <ul class="actions special">
                                 <li><a href="projects.html" class="button large">View My Projects</a></li>
                             </ul>
@@ -91,39 +113,21 @@
                 <section class="posts">
                     <article>
                         <header>
-                            <h2><a href="projects.html">Container Security Lab 🐳</a></h2>
+                            <img src="images/polishyouthicon.png" alt="Polish Youth Logo" class="post-logo" />
+                            <h2><a href="https://www.polishyouth.org/team">Polish Youth Association</a></h2>
                         </header>
-                        <p>Hands-on Docker + EKS lab with Falco runtime alerts and compliance mapping (NIST SI-4, SOC 2).</p>
+                        
                         <ul class="actions special">
-                            <li><a href="projects.html" class="button">Learn More</a></li>
+                            <li><a href="polishyouth.html" class="button">About my Role</a></li>
                         </ul>
                     </article>
 
                     <article>
                         <header>
-                            <h2><a href="projects.html">CI/CD Pipeline Security ⚙️</a></h2>
+                            <img src="images/fcorlyicon.png" alt="Orly FC Logo" class="post-logo" />
+                            <h2><a href="orlyfc.html">ORŁY F.C. </a></h2>
                         </header>
-                        <p>Shift-left security with IaC scanning and SAST integration for reproducible pipelines.</p>
-                        <ul class="actions special">
-                            <li><a href="projects.html" class="button">Learn More</a></li>
-                        </ul>
-                    </article>
-
-                    <article>
-                        <header>
-                            <h2><a href="polishyouth.html">PolishYouth.org 🌍</a></h2>
-                        </header>
-                        <p>CTO at PolishYouth.org, empowering youth through technology, leadership, and community projects.</p>
-                        <ul class="actions special">
-                            <li><a href="polishyouth.html" class="button">Learn More</a></li>
-                        </ul>
-                    </article>
-
-                    <article>
-                        <header>
-                            <h2><a href="orlyfc.html">Orly FC ⚽</a></h2>
-                        </header>
-                        <p>Founder of Orly FC, a nonprofit soccer club dedicated to youth empowerment and teamwork.</p>
+                        
                         <ul class="actions special">
                             <li><a href="orlyfc.html" class="button">Learn More</a></li>
                         </ul>
@@ -134,20 +138,13 @@
             <!-- Footer -->
             <footer id="footer">
                 <section class="split contact">
-                    <section class="alt">
-                        <h3>Location</h3>
-                        <p>Pocono, PA, United States</p>
-                    </section>
-                    <section>
-                        <h3>Email</h3>
-                        <p><a href="mailto:dannybzura@gmail.com">dannybzura@gmail.com</a></p>
-                    </section>
                     <section>
                         <h3>Social</h3>
                         <ul class="icons alt">
                             <li><a href="https://github.com/bzuracyber" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
                             <li><a href="https://www.linkedin.com/in/daniel-bzura-0b3a9b1b5/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
                             <li><a href="https://www.instagram.com/bzuracyber/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                            <li><a href="mailto:dannybzura@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
                         </ul>
                     </section>
                 </section>

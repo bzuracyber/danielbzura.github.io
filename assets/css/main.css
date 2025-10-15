@@ -3305,8 +3305,8 @@ input, select, textarea {
 	left: 50%;
 	min-width: 100%;
 	min-height: 100%;
-	width: auto;
-	height: auto;
+	width: 100%;
+	height: 100%;
 	z-index: -2;
 	transform: translate(-50%, -50%);
 	object-fit: cover;
@@ -3436,8 +3436,8 @@ input, select, textarea {
 		-webkit-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		height: 12rem;
-		padding-bottom: 6rem;
+		height: 5rem;
+		padding-bottom: 0rem;
 		position: relative;
 		text-align: center;
 		z-index: 2;
@@ -4616,21 +4616,37 @@ input, select, textarea {
 		}
 
 	}
-/* Custom Featured Section */
-.featured-flex {
-    display: flex;
+@media (max-width: 768px) {
+	 #intro {
+    padding: 1rem;
+  }
+
+  #bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .featured-flex {
+    flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
+    text-align: center;
+  }
 
-.featured-flex img {
-    max-width: 280px;   /* keeps photo a nice size */
-    border-radius: 8px; /* rounded corners */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* subtle shadow */
-}
+  .featured-flex > div:first-child {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 
-.featured-text {
-    flex: 1;
-    min-width: 250px;
+  .post-featured {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+	margin-bottom: 1.5rem;
+  }
+
+  .featured-text {
+    padding: 0 1rem;
+  }
 }
