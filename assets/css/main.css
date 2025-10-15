@@ -3293,7 +3293,7 @@ input, select, textarea {
 	position: relative;
 	cursor: default;
 	z-index: 1;
-	min-height: 95vh;
+	min-height: 100vh;
 	transition: opacity 1s ease, transform 1s ease;
 	overflow: hidden; /* keep video inside */
 }
@@ -3436,8 +3436,8 @@ input, select, textarea {
 		-webkit-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		height: 20rem;
-		padding-bottom: 8rem;
+		height: 12rem;
+		padding-bottom: 6rem;
 		position: relative;
 		text-align: center;
 		z-index: 2;
